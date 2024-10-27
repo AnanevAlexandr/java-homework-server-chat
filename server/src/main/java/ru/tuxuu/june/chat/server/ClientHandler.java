@@ -38,6 +38,9 @@ public class ClientHandler {
                             sendMessage("/exitok");
                             break;
                         }
+                        if (message.startsWith("/w")) {
+                            server.messageForOne(message);
+                        }
                         continue;
                     }
                     server.broadcastMessage(userName + ": " + message);

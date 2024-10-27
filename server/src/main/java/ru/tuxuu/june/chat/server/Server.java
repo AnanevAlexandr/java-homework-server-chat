@@ -41,4 +41,12 @@ public class Server {
             c.sendMessage(message);
         }
     }
+    public void messageForOne(String message) {
+        String[] result = message.split(" ");
+        for (ClientHandler c : clients) {
+            if (c.getUserName().equals(result[1])) {
+                c.sendMessage(result[2]);
+            }
+        }
+    }
 }
