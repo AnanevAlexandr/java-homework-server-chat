@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="506da24a-21cf-430d-ab29-8f41d7c83bc7" name="Changes" comment="Реализована возможность отправки личных сообщений">
+    <list default="true" id="506da24a-21cf-430d-ab29-8f41d7c83bc7" name="Changes" comment="Исправление ошибок согласно комментариям">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/tuxuu/june/chat/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/tuxuu/june/chat/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/ClientHandler.java" afterDir="false" />
@@ -109,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1730065592074</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Исправление ошибок согласно комментариям">
+      <created>1730133406326</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730133406326</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,6 +134,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Мастер ветка для серверного чата" />
     <MESSAGE value="Реализована возможность отправки личных сообщений" />
-    <option name="LAST_COMMIT_MESSAGE" value="Реализована возможность отправки личных сообщений" />
+    <MESSAGE value="Исправление ошибок согласно комментариям" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправление ошибок согласно комментариям" />
   </component>
 </project>

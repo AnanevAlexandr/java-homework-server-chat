@@ -39,7 +39,7 @@ public class ClientHandler {
                             break;
                         }
                         if (message.startsWith("/w ")) {
-                            server.messageForOne(message, this.userName);
+                            server.messageForOne(message, ClientHandler.this);
                         }
                         continue;
                     }
