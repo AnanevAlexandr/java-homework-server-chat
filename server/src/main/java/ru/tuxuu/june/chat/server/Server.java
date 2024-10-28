@@ -3,6 +3,7 @@ package ru.tuxuu.june.chat.server;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Server {
@@ -41,11 +42,22 @@ public class Server {
             c.sendMessage(message);
         }
     }
-    public void messageForOne(String message) {
+    public void messageForOne(String message, String username) {
         String[] result = message.split(" ");
+        String mes = "";
+        for (int i = 2; i < result.length; i++) {
+            mes = mes.concat(result[i] + " ");
+        }
         for (ClientHandler c : clients) {
             if (c.getUserName().equals(result[1])) {
-                c.sendMessage(result[2]);
+                c.sendMessage(username + " for you: " + mes);
+                break;
+            }
+        }
+        for (ClientHandler c : clients) {
+            if (c.getUserName().equals(username)) {
+                c.sendMessage("Message for " + result[1] + ": " + mes);
+                return;
             }
         }
     }
