@@ -72,8 +72,20 @@ public class ClientHandler {
                         }
                         if (message.startsWith("/w ")) {
                             server.messageForOne(message, ClientHandler.this);
+                            continue;
                         }
-                        continue;
+                        if (message.startsWith("/kick")) {
+                            String[] elements = message.split(" ");
+                            if (elements.length != 2) {
+                                sendMessage("Неверный формат команды /kick ");
+                                continue;
+                            }
+                            if(server.getAuthenticatedProvider().checkToKick(this, elements[1])){
+                                String userToKick = elements[1];
+                                server.kickUser(userToKick);
+                            }
+                            continue;
+                        }
                     }
                     server.broadcastMessage(username + " : " + message);
                 }

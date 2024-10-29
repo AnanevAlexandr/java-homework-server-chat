@@ -8,11 +8,13 @@ public class InMemoryAuthenticationProvider implements AuthenticatedProvider {
         private String login;
         private String password;
         private String username;
+        private String role;
 
-        public User(String login, String password, String username) {
+        public User(String login, String password, String username, String role) {
             this.login = login;
             this.password = password;
             this.username = username;
+            this.role = role;
         }
     }
 
@@ -22,10 +24,10 @@ public class InMemoryAuthenticationProvider implements AuthenticatedProvider {
     public InMemoryAuthenticationProvider(Server server) {
         this.server = server;
         this.users = new ArrayList<>();
-        this.users.add(new User("login1", "pass1", "Bob"));
-        this.users.add(new User("111", "111111", "Tom"));
-        this.users.add(new User("222", "222222", "Jack"));
-        this.users.add(new User("333", "333333", "Mick"));
+        this.users.add(new User("login1", "pass1", "Bob", "Admin"));
+        this.users.add(new User("111", "111111", "Tom", "User"));
+        this.users.add(new User("222", "222222", "Jack", "User"));
+        this.users.add(new User("333", "333333", "Mick", "User"));
     }
 
     @Override
@@ -94,11 +96,28 @@ public class InMemoryAuthenticationProvider implements AuthenticatedProvider {
             clientHandler.sendMessage("Указанное имя пользователя уже занято");
             return false;
         }
-        users.add(new User(login, password, username));
+        users.add(new User(login, password, username, "User"));
         clientHandler.setUsername(username);
         server.subscribe(clientHandler);
         clientHandler.sendMessage("/regok " + username);
 
+        return true;
+    }
+
+    public boolean isAdmin(String username) {
+        for (User u : users) {
+            if (u.username.equals(username) && u.role.equals("Admin")) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean checkToKick(ClientHandler clientHandler, String username) {
+        if (!isAdmin(clientHandler.getUsername())) {
+            clientHandler.sendMessage("Не достаточно прав");
+            return false;
+        }
         return true;
     }
 }

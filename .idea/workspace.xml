@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="506da24a-21cf-430d-ab29-8f41d7c83bc7" name="Changes" comment="Исправления ошибок согласно комментариям №2">
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/AuthenticatedProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/InMemoryAuthenticationProvider.java" afterDir="false" />
+    <list default="true" id="506da24a-21cf-430d-ab29-8f41d7c83bc7" name="Changes" comment="Загатовка к ДЗ №2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/tuxuu/june/chat/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/tuxuu/june/chat/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/AuthenticatedProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/AuthenticatedProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/InMemoryAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/InMemoryAuthenticationProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/ServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/ServerApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +53,7 @@
       <recent name="ru.tuxuu.june.chat.server" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ServerApplication">
+  <component name="RunManager" selected="Application.ClientApplication">
     <configuration name="ClientApplication" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.tuxuu.june.chat.ClientApplication" />
       <module name="client" />
@@ -130,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1730155952627</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Загатовка к ДЗ №2">
+      <created>1730201093259</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1730201093259</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -149,6 +154,7 @@
     <MESSAGE value="Реализована возможность отправки личных сообщений" />
     <MESSAGE value="Исправление ошибок согласно комментариям" />
     <MESSAGE value="Исправления ошибок согласно комментариям №2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправления ошибок согласно комментариям №2" />
+    <MESSAGE value="Загатовка к ДЗ №2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Загатовка к ДЗ №2" />
   </component>
 </project>

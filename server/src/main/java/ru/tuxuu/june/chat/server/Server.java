@@ -68,4 +68,14 @@ public class Server {
         }
         client.sendMessage("Пользователь " + result[1] + " не найден");
     }
+    public synchronized void kickUser(String userToKick){
+        for(ClientHandler c : clients){
+            if(c.getUsername().equals(userToKick)){
+                c.sendMessage("Вы были отключены от чата");
+                clients.remove(c);
+                broadcastMessage("Пользователь "+userToKick+" был отключен администратором");
+                break;
+            }
+        }
+    }
 }
