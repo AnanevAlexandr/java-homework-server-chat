@@ -1,17 +1,25 @@
 package ru.tuxuu.june.chat.server;
 
+import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Server {
-    private List<ClientHandler> clients;
     private int port;
+    private List<ClientHandler> clients;
+    private AuthenticatedProvider authenticatedProvider;
 
     public Server(int port) {
         this.port = port;
-        this.clients = new ArrayList<>();
+        clients = new ArrayList<>();
+        authenticatedProvider = new InMemoryAuthenticationProvider(this);
+        authenticatedProvider.initialize();
+    }
+
+    public AuthenticatedProvider getAuthenticatedProvider() {
+        return authenticatedProvider;
     }
 
     public void start() {
@@ -19,34 +27,41 @@ public class Server {
             System.out.println("Сервер запущен на порту: " + port);
             while (true) {
                 Socket socket = serverSocket.accept();
-                subscribe(new ClientHandler(this, socket));
+                new ClientHandler(this, socket);
             }
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public synchronized void subscribe(ClientHandler clientHandler) {
-        broadcastMessage("В чат зашёл: " + clientHandler.getUserName());
         clients.add(clientHandler);
     }
 
     public synchronized void unsubscribe(ClientHandler clientHandler) {
         clients.remove(clientHandler);
-        broadcastMessage("Из чата вышел: " + clientHandler.getUserName());
     }
 
     public synchronized void broadcastMessage(String message) {
-        for (ClientHandler c : clients) {
-            c.sendMessage(message);
+        for (ClientHandler client : clients) {
+            client.sendMessage(message);
         }
+    }
+
+    public boolean isUsernameBusy(String username) {
+        for (ClientHandler client : clients) {
+            if (client.getUsername().equals(username)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public synchronized void messageForOne(String message, ClientHandler client) {
         String[] result = message.split(" ", 3);
         for (ClientHandler c : clients) {
-            if (c.getUserName().equals(result[1])) {
-                c.sendMessage(client.getUserName() + " for you: " + result[2]);
+            if (c.getUsername().equals(result[1])) {
+                c.sendMessage(client.getUsername() + " for you: " + result[2]);
                 client.sendMessage("Message for " + result[1] + ": " + result[2]);
                 return;
             }

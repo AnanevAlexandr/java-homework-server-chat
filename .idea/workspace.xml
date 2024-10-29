@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="506da24a-21cf-430d-ab29-8f41d7c83bc7" name="Changes" comment="Исправление ошибок согласно комментариям">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="506da24a-21cf-430d-ab29-8f41d7c83bc7" name="Changes" comment="Исправления ошибок согласно комментариям №2">
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/AuthenticatedProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/InMemoryAuthenticationProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/ru/tuxuu/june/chat/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/ru/tuxuu/june/chat/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/ClientHandler.java" afterDir="false" />
@@ -41,15 +42,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "jdk.selected.JAVA_MODULE": "liberica-17"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;liberica-17&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.ClientApplication">
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.tuxuu.june.chat.server" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ServerApplication">
     <configuration name="ClientApplication" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.tuxuu.june.chat.ClientApplication" />
       <module name="client" />
@@ -117,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1730133406326</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Исправления ошибок согласно комментариям №2">
+      <created>1730155952627</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730155952627</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +148,7 @@
     <MESSAGE value="Мастер ветка для серверного чата" />
     <MESSAGE value="Реализована возможность отправки личных сообщений" />
     <MESSAGE value="Исправление ошибок согласно комментариям" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправление ошибок согласно комментариям" />
+    <MESSAGE value="Исправления ошибок согласно комментариям №2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправления ошибок согласно комментариям №2" />
   </component>
 </project>

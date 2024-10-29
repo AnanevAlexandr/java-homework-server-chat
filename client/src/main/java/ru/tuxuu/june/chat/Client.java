@@ -7,12 +7,11 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Client {
-    private DataOutputStream out;
-    private DataInputStream in;
-    private Socket socket;
+    Socket socket;
+    DataInputStream in;
+    DataOutputStream out;
 
     public Client() throws IOException {
-        this.socket = socket;
         Scanner scanner = new Scanner(System.in);
         socket = new Socket("localhost", 8189);
         in = new DataInputStream(socket.getInputStream());
@@ -21,10 +20,21 @@ public class Client {
             try {
                 while (true) {
                     String message = in.readUTF();
-                    if (message.equals("/exitok")) {
-                        break;
+                    if (message.startsWith("/")) {
+                        if (message.startsWith("/exitok")) {
+                            break;
+                        }
+                        if (message.startsWith("/authok ")) {
+                            System.out.println("Аутентификация прошла успешно с именем пользователя: " +
+                                    message.split(" ")[1]);
+                        }
+                        if (message.startsWith("/regok ")) {
+                            System.out.println("регистрация прошла успешно с именем пользователя: " +
+                                    message.split(" ")[1]);
+                        }
+                    } else {
+                        System.out.println(message);
                     }
-                    System.out.println(message);
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -35,7 +45,7 @@ public class Client {
         while (true) {
             String message = scanner.nextLine();
             out.writeUTF(message);
-            if (message.equals("/exit")) {
+            if (message.startsWith("/exit")) {
                 break;
             }
         }
