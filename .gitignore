@@ -12,7 +12,7 @@ out/
 .idea/compiler.xml
 .idea/libraries/
 .idea/encodings.xml
-.idea/*
+.idea/
 .iws
 .iml
 .ipr
