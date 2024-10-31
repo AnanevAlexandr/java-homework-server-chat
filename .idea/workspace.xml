@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="506da24a-21cf-430d-ab29-8f41d7c83bc7" name="Changes" comment="Загатовка к ДЗ №2">
+    <list default="true" id="506da24a-21cf-430d-ab29-8f41d7c83bc7" name="Changes" comment="Добавлены роли и возможность отключения от чата">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/AuthenticatedProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/AuthenticatedProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/ClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/InMemoryAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/InMemoryAuthenticationProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ru/tuxuu/june/chat/server/Server.java" afterDir="false" />
@@ -135,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1730201093259</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Добавлены роли и возможность отключения от чата">
+      <created>1730216257809</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730216257809</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -155,6 +161,17 @@
     <MESSAGE value="Исправление ошибок согласно комментариям" />
     <MESSAGE value="Исправления ошибок согласно комментариям №2" />
     <MESSAGE value="Загатовка к ДЗ №2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Загатовка к ДЗ №2" />
+    <MESSAGE value="Добавлены роли и возможность отключения от чата" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлены роли и возможность отключения от чата" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.io.EOFException" package="java.io" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

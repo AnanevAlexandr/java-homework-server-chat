@@ -118,6 +118,14 @@ public class InMemoryAuthenticationProvider implements AuthenticatedProvider {
             clientHandler.sendMessage("Не достаточно прав");
             return false;
         }
+        if (!isUsernameAlreadyExist(username)){
+            clientHandler.sendMessage("Пользователя не существует");
+            return false;
+        }
+        if (!server.isUsernameBusy(username)) {
+            clientHandler.sendMessage("Пользователь не в сети");
+            return false;
+        }
         return true;
     }
 }

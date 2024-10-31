@@ -72,7 +72,7 @@ public class Server {
         for(ClientHandler c : clients){
             if(c.getUsername().equals(userToKick)){
                 c.sendMessage("Вы были отключены от чата");
-                clients.remove(c);
+                c.disconnect();
                 broadcastMessage("Пользователь "+userToKick+" был отключен администратором");
                 break;
             }

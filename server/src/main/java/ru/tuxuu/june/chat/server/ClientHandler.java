@@ -105,7 +105,7 @@ public class ClientHandler {
         }
     }
 
-    private void disconnect() {
+    public void disconnect() {
         server.unsubscribe(this);
         try {
             if (in != null) {
